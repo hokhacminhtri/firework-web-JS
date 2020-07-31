@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil');
+*{
+  font-family: 'Allerta Stencil', sans-serif;
+}
+
+body{
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  height:100vh; 
+  background:#111;
+}
+
+canvas{
+  background-image: url('./images/img01.jpg');
+}
+
+p{
+  position:fixed;
+  width:100%;
+  text-align:center;
+  color:purple;
+  left:50%;
+  top:30%;
+  transform:translate(-50%,-50%);
+  font-size:60px;
+}
+
+button{
+  background:#FF0000;
+  border:0px;
+  border-radius:4px;
+  color:#fff;
+  padding: 5px 15px;
+  margin-bottom:5px;
+  cursor:pointer;
+  transition:.3s all;
+  outline:none;
+  box-shadow:0px 0px 5px #ff0000;
+}
+
+button:hover{
+  background:#FF3030;
+}
+
+button:active{
+  transform:translate(-2px, 2px);
+}
+
+.option{
+  position:fixed;
+  left:40px;
+  bottom:40px;
+}
+
+label{
+  font-size:14px;
+  color:#fff;
+}
+
+input[type="range"]{
+  -webkit-appearance:none;
+  appearance:none;
+  height:5px;
+  margin-top:20px;
+  background-image:linear-gradient(45deg ,#db0094, #0000ff, #ffff00, #ff0000, #db0094, #0000ff, #ffff00, #ff0000);
+  outline:none;
+  cursor:pointer;
+  width:200px;
+  border-radius:10px;
+  border:1px solid #fff;
+  background-size:400%;
+  animation: animationBackground 20s infinite;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  margin-top:-1px;
+  border-radius:50%;
+  border:3px solid #fff;
+  box-shadow:0px 0px 5px 2px #fff;
+  background-image:linear-gradient(0deg ,#db0094, #0000ff, #ffff00, #ff0000, #db0094, #0000ff, #ffff00, #ff0000);
+}
+
+input[type="range"]::-webkit-slider-thumb:active{
+  background:white;
+}
+
+input[type="range"]::slider-thumb{
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  margin-top:-1px;
+  border-radius:50%;
+  border:3px solid #fff;
+  box-shadow:0px 0px 5px 2px #fff;
+  background-image:linear-gradient(0deg ,#db0094, #0000ff, #ffff00, #ff0000, #db0094, #0000ff, #ffff00, #ff0000);
+}
+
+@keyframes animationBackground{
+  0%{
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 300% 0;
+  }
+  100%{
+    background-position: 0 0;
+  }
+}
